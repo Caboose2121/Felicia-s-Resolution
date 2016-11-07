@@ -83,7 +83,7 @@ speedY = 0;
             <kind>1</kind>
             <string>if(isMoving == false)
 {
-    if(keyboard_check(vk_right))
+    if(keyboard_check(vk_right) &amp;&amp; self.x &lt; (room_width-32))
     {
         image_index = 2;
         isMoving = true;
@@ -91,7 +91,7 @@ speedY = 0;
         speedX = moveSpeed;
         speedY = 0;
     }
-    if(keyboard_check(vk_left))
+    if(keyboard_check(vk_left) &amp;&amp; self.x &gt; 0)
     {
         image_index = 1;
         isMoving = true;
@@ -99,7 +99,7 @@ speedY = 0;
         speedX = -moveSpeed;
         speedY = 0;
     }
-    if(keyboard_check(vk_up))
+    if(keyboard_check(vk_up) &amp;&amp; self.y &gt; 0)
     {
         image_index = 3;
         isMoving = true;
@@ -107,7 +107,7 @@ speedY = 0;
         speedX = 0;
         speedY = -moveSpeed;
     }
-    if(keyboard_check(vk_down))
+    if(keyboard_check(vk_down) &amp;&amp; self.y &lt; (room_height-32))
     {
         image_index = 0;
         isMoving = true;
