@@ -85,35 +85,47 @@ speedY = 0;
 {
     if(keyboard_check(vk_right) &amp;&amp; self.x &lt; (room_width-32))
     {
-        image_index = 2;
-        isMoving = true;
-        moveTimer = gridSize;
-        speedX = moveSpeed;
-        speedY = 0;
+        if(obj_grid.cells[x div 32 + 1, y div 32] == 0)
+        {
+            image_index = 2;
+            isMoving = true;
+            moveTimer = gridSize;
+            speedX = moveSpeed;
+            speedY = 0;
+        }
     }
     if(keyboard_check(vk_left) &amp;&amp; self.x &gt; 0)
     {
-        image_index = 1;
-        isMoving = true;
-        moveTimer = gridSize;
-        speedX = -moveSpeed;
-        speedY = 0;
+        if(obj_grid.cells[x div 32 - 1, y div 32] == 0)
+        {
+            image_index = 1;
+            isMoving = true;
+            moveTimer = gridSize;
+            speedX = -moveSpeed;
+            speedY = 0;
+        }
     }
     if(keyboard_check(vk_up) &amp;&amp; self.y &gt; 0)
     {
-        image_index = 3;
-        isMoving = true;
-        moveTimer = gridSize;
-        speedX = 0;
-        speedY = -moveSpeed;
+        if(obj_grid.cells[x div 32, y div 32 - 1] == 0)
+        {
+            image_index = 3;
+            isMoving = true;
+            moveTimer = gridSize;
+            speedX = 0;
+            speedY = -moveSpeed;
+        }
     }
     if(keyboard_check(vk_down) &amp;&amp; self.y &lt; (room_height-32))
     {
-        image_index = 0;
-        isMoving = true;
-        moveTimer = gridSize;
-        speedX = 0;
-        speedY = moveSpeed;
+        if(obj_grid.cells[x div 32, y div 32 + 1] == 0)
+        {
+            image_index = 0;
+            isMoving = true;
+            moveTimer = gridSize;
+            speedX = 0;
+            speedY = moveSpeed;
+        }
     }
 }
 
