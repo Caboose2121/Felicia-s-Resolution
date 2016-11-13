@@ -11,6 +11,9 @@
     <sprite>sprites\spr_alli_meter</sprite>
     <sprite>sprites\apr_alli_peg</sprite>
     <sprite>sprites\spr_block</sprite>
+    <sprite>sprites\sprite5</sprite>
+    <sprite>sprites\spr_catTree</sprite>
+    <sprite>sprites\spr_diaBox</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\Tiles1</background>
@@ -25,6 +28,8 @@
     <object>objects\obj_block</object>
     <object>objects\obj_grid</object>
     <object>objects\obj_controller</object>
+    <object>objects\obj_NPC1</object>
+    <object>objects\obj_catTree</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Level</room>
