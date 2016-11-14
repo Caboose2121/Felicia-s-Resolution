@@ -14,11 +14,18 @@
     <sprite>sprites\sprite5</sprite>
     <sprite>sprites\spr_catTree</sprite>
     <sprite>sprites\spr_diaBox</sprite>
+    <sprite>sprites\spr_title</sprite>
+    <sprite>sprites\spr_credits</sprite>
+    <sprite>sprites\spr_controls</sprite>
+    <sprite>sprites\spr_start</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\Tiles1</background>
     <background>background\grass_tile</background>
     <background>background\tiles_2</background>
+    <background>background\background3</background>
+    <background>background\background4</background>
+    <background>background\background5</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
@@ -30,8 +37,13 @@
     <object>objects\obj_controller</object>
     <object>objects\obj_NPC1</object>
     <object>objects\obj_catTree</object>
+    <object>objects\obj_title</object>
+    <object>objects\obj_start</object>
+    <object>objects\obj_controls</object>
+    <object>objects\obj_credits</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\Title</room>
     <room>rooms\Level</room>
   </rooms>
   <help>
