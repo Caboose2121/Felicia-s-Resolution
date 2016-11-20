@@ -103,6 +103,30 @@ speedY = 0;
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>money</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>global.isTalking</string>
           </argument>
           <argument>
@@ -135,6 +159,126 @@ speedY = 0;
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>tut</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>axe</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>false</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>catFood</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>false</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>creature</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>questsDone</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="2" enumb="1">
       <action>
@@ -153,14 +297,19 @@ speedY = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.allign == 1)
+            <string>if(global.allign &gt; 0)
 {
     show_message("The town of Lunaris respects your decisions and has decided to let you stay as their friend. Well done.");
     game_restart();
 }
-if(global.allign == -1)
+else if(global.allign &lt; 0)
 {
     show_message("The town of Lunaris finds your decisions to be... questionable. They have asked you to leave for their own mental well being, but at least you tried.");
+    game_restart();
+}
+else if(global.allign == 0)
+{
+    show_message("The town of Lunaris lets you stay if you want.");
     game_restart();
 }
 </string>
@@ -171,21 +320,33 @@ if(global.allign == -1)
     <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
-        <id>321</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_message</functionname>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>2</kind>
-            <string>Welcome, Felicia, to the town of Lunaris. You must help the people of this town in either pacifistic or aggressive means. Your decisions will affect how the town sees you and your fate with the town.</string>
+            <kind>1</kind>
+            <string>if(global.easy == true)
+{
+    show_message("Welcome, Felicia, to the town of Lunaris. 
+    You must help the people of this town in either pacifistic or aggressive means. 
+    Your decisions will affect how the town sees you and your fate with the town. Try talking to the man ahead with (E) and see what he needs.");
+}
+else
+{
+    show_message("Welcome, Felicia, to the town of Lunaris. 
+    You must help the people of this town in either pacifistic or aggressive means. 
+    Your decisions will affect how the town sees you and your fate with the town.");
+}
+</string>
           </argument>
         </arguments>
       </action>
@@ -268,6 +429,9 @@ if(isMoving == true)
     }
 }
 }
+
+if(money &lt; 0)
+    money = 0;
 </string>
           </argument>
         </arguments>
@@ -288,9 +452,46 @@ if(isMoving == true)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.isTalking == false &amp;&amp; global.allign != 0 &amp;&amp; alarm[1] == -1)
+            <string>if(global.isTalking == false &amp;&amp; questsDone == 2 &amp;&amp; alarm[1] == -1)
 {
     alarm[1] = 90;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(global.easy == true)
+{
+    if(tut == 1)
+    {
+        show_message("Good. Now approach the tree and press (E) to try to help that man get his domesticated creature back.");
+        tut = 2;
+    }
+    if(tut == 2 &amp;&amp; obj_NPC1.jobDone == true)
+    {
+        show_message("Now that you have helped this gentleman, you should now attempt to help other people in Lunaris and make similar decisions and decide your fate with this town. Remember, the choice is always yours.");
+        tut = 3;
+    }
+}
+else
+{
+    exit;
 }
 </string>
           </argument>

@@ -6,18 +6,23 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprites name="menus">
+      <sprite>sprites\spr_difficulty</sprite>
+      <sprite>sprites\spr_start</sprite>
+      <sprite>sprites\spr_controls</sprite>
+      <sprite>sprites\spr_credits</sprite>
+      <sprite>sprites\spr_title</sprite>
+      <sprite>sprites\spr_diaBox</sprite>
+    </sprites>
     <sprite>sprites\spr_Felicia</sprite>
     <sprite>sprites\spr_NPC1</sprite>
     <sprite>sprites\spr_alli_meter</sprite>
     <sprite>sprites\apr_alli_peg</sprite>
     <sprite>sprites\spr_block</sprite>
-    <sprite>sprites\sprite5</sprite>
     <sprite>sprites\spr_catTree</sprite>
-    <sprite>sprites\spr_diaBox</sprite>
-    <sprite>sprites\spr_title</sprite>
-    <sprite>sprites\spr_credits</sprite>
-    <sprite>sprites\spr_controls</sprite>
-    <sprite>sprites\spr_start</sprite>
+    <sprite>sprites\spr_NPC2</sprite>
+    <sprite>sprites\spr_NPC3</sprite>
+    <sprite>sprites\spr_creature</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\Tiles1</background>
@@ -36,11 +41,16 @@
     <object>objects\obj_grid</object>
     <object>objects\obj_controller</object>
     <object>objects\obj_NPC1</object>
+    <object>objects\obj_NPC2</object>
+    <object>objects\obj_NPC3</object>
     <object>objects\obj_catTree</object>
+    <object>objects\obj_creature</object>
     <object>objects\obj_title</object>
     <object>objects\obj_start</object>
     <object>objects\obj_controls</object>
     <object>objects\obj_credits</object>
+    <object>objects\obj_easy</object>
+    <object>objects\obj_hard</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Title</room>

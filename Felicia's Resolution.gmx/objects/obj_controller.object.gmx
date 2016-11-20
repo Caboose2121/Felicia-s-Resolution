@@ -51,7 +51,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(spr_alli_meter,0,view_xview + (view_wview div 2),view_yview);
+            <string>draw_text(view_xview + 15,view_yview + 15,"Money: ");
+draw_text(view_xview + 80,view_yview + 15,Felicia.money);
+
+//draw_text(view_xview + 80,view_yview + 30,Felicia.questsDone);
+
+draw_sprite(spr_alli_meter,0,view_xview + (view_wview div 2),view_yview);
 
 if(global.allign == 0)
     draw_sprite(apr_alli_peg,0,view_xview + (view_wview div 2),view_yview);

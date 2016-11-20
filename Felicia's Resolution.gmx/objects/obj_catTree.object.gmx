@@ -37,6 +37,54 @@
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>tut</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>noItem</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>false</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="8" enumb="0">
       <action>
@@ -88,40 +136,100 @@
             global.isTalking = false;
             Felicia.depth = 0;
             depth = 0;
+            noItem = false;
             exit;
         }
     }
     
     if(Felicia.hasCat == 0 &amp;&amp; global.isTalking == true)
     {
-        draw_sprite(spr_diaBox,0,0,view_yview+272);
+        draw_sprite(spr_diaBox,0,view_xview,view_yview+272);
         draw_text(view_xview+10, view_yview+280, "A cat is stuck in this tree. How will you get him down?");
         draw_text(view_xview+50, view_yview+320, "Coax him down with food (Q).");
         draw_text(view_xview+350, view_yview+320, "Cut down tree (W).");
+        draw_text(view_xview+250, view_yview+350, "Press (E) to continue.");
+        
+        if(noItem == true)
+            {draw_text(view_xview+10, view_yview+300,"You don't have the required item to do that.");}
+        
+        if(tut == 0 &amp;&amp; global.easy == true)
+        {
+            show_message("You will now be prompted to help get this, now living, creature down from the tall, sturdy, plantlife. 
+            You may retrieve the creature via peaceful (Q) or belligerant (W) means. The choice is yours.");
+            tut = 1;
+        }
         
         if(keyboard_check_pressed(ord('Q')))
         {
-            image_index = 1;
-            Felicia.hasCat = 1;
+            if(global.easy == true)
+            {
+                image_index = 1;
+                Felicia.hasCat = 1;
+                tut = 2;
+            }
+            else
+            {
+                if(Felicia.catFood == true)
+                {
+                    image_index = 1;
+                    Felicia.hasCat = 1;
+                    noItem = false;
+                }
+                else
+                {
+                    noItem = true;
+                }
+            }
         }
         if(keyboard_check_pressed(ord('W')))
         {
-            image_index = 2;
-            Felicia.hasCat = 2;
+            if(global.easy == true)
+            {
+                image_index = 2;
+                Felicia.hasCat = 2;
+                tut = 3;
+            }
+            else
+            {
+                if(Felicia.axe == true)
+                {
+                    image_index = 2;
+                    Felicia.hasCat = 2;
+                    noItem = false;
+                }
+                else
+                {
+                    noItem = true;
+                    //draw_text(view_xview+10, view_yview+300,"You don't have the required item to do that.");
+                }
+            }
         }
     }
     if(Felicia.hasCat == 1 &amp;&amp; global.isTalking == true)
     {
-        draw_sprite(spr_diaBox,0,0,view_yview+272);
+        draw_sprite(spr_diaBox,0,view_xview,view_yview+272);
         draw_text(view_xview+10, view_yview+280, "You got the cat down safely!");
         draw_text(view_xview+250, view_yview+350, "Press (E) to continue.");
+        //tut = 2;
     }
     if(Felicia.hasCat == 2 &amp;&amp; global.isTalking == true)
     {
-        draw_sprite(spr_diaBox,0,0,view_yview+272);
+        draw_sprite(spr_diaBox,0,view_xview,view_yview+272);
         draw_text(view_xview+10, view_yview+280, "You recieved a dead cat!");
         draw_text(view_xview+250, view_yview+350, "Press (E) to continue.");
+        //tut = 3;
     }
+
+        if(tut == 2 &amp;&amp; global.easy == true)
+        {
+            show_message("You've made your own decision in life. Congratulations. Now return that still living creature to it's, hopefully, rightful owner.");
+            tut = 4;
+        }
+        if(tut == 3 &amp;&amp; global.easy == true)
+        {
+            show_message("You've made your own decision in life. Congratulations. Return that, now decaying, creature to the man that wanted it. Remember, he asked for your 'Help'.");
+            tut = 4;
+        }
 }
 </string>
           </argument>
