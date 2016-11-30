@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-10</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -33,8 +33,131 @@
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.pause</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>false</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>526</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_font</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>12</kind>
+            <font>fnt_def</font>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//draw_text(view_xview + 80,view_yview + 30,obj_NPC1.talked);
+
+if(keyboard_check_pressed(ord('P')))
+{
+    if(global.pause == true)
+    {
+        global.pause = false;
+    }
+    else
+    {
+        global.pause = true;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>612</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if_variable</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>global.pause</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>false</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -92,6 +215,187 @@ else if(global.allign == -7)
 </string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>612</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if_variable</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>global.pause</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>true</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_sprite(spr_scroll,0,view_xview,view_yview);
+
+draw_sprite(spr_alli_meter,0,view_xview + (view_wview div 2),view_yview + 50);
+
+if(global.allign == 0)
+    draw_sprite(apr_alli_peg,0,view_xview + (view_wview div 2),view_yview + 50);
+else if(global.allign == 1)
+    draw_sprite(apr_alli_peg,0,view_xview + (view_wview div 2) + 24,view_yview + 50);
+else if(global.allign == -1)
+    draw_sprite(apr_alli_peg,0,view_xview + (view_wview div 2) - 24,view_yview + 50);
+else if(global.allign == 2)
+    draw_sprite(apr_alli_peg,0,view_xview + (view_wview div 2) + 48,view_yview + 50);
+else if(global.allign == -2)
+    draw_sprite(apr_alli_peg,0,view_xview + (view_wview div 2) - 48,view_yview + 50);
+else if(global.allign == 3)
+    draw_sprite(apr_alli_peg,0,view_xview + (view_wview div 2) + 72,view_yview + 50);
+else if(global.allign == -3)
+    draw_sprite(apr_alli_peg,0,view_xview + (view_wview div 2) - 72,view_yview + 50);
+else if(global.allign == 4)
+    draw_sprite(apr_alli_peg,0,view_xview + (view_wview div 2) + 96,view_yview + 50);
+else if(global.allign == -4)
+    draw_sprite(apr_alli_peg,0,view_xview + (view_wview div 2) - 96,view_yview + 50);
+else if(global.allign == 5)
+    draw_sprite(apr_alli_peg,0,view_xview + (view_wview div 2) + 120,view_yview + 50);
+else if(global.allign == -5)
+    draw_sprite(apr_alli_peg,0,view_xview + (view_wview div 2) - 120,view_yview + 50);
+else if(global.allign == 6)
+    draw_sprite(apr_alli_peg,0,view_xview + (view_wview div 2) + 144,view_yview + 50);
+else if(global.allign == -6)
+    draw_sprite(apr_alli_peg,0,view_xview + (view_wview div 2) - 144,view_yview + 50);
+else if(global.allign == 7)
+    draw_sprite(apr_alli_peg,0,view_xview + (view_wview div 2) + 168,view_yview + 50);
+else if(global.allign == -7)
+    draw_sprite(apr_alli_peg,0,view_xview + (view_wview div 2) - 168,view_yview + 50);
+
+draw_text_transformed(view_xview+75,view_yview+80,"Allignment with Lunaris: ",1.5,1.5,0);
+if(global.allign == 7)
+    draw_text_transformed(view_xview+430,view_yview+80,"Amazing",1.5,1.5,0);
+if(global.allign &lt; 7 &amp;&amp; global.allign &gt; 3)
+    draw_text_transformed(view_xview+430,view_yview+80,"Great",1.5,1.5,0);
+if(global.allign &lt; 4 &amp;&amp; global.allign &gt; 0)
+    draw_text_transformed(view_xview+430,view_yview+80,"Good",1.5,1.5,0);
+if(global.allign == 0)
+    draw_text_transformed(view_xview+430,view_yview+80,"Neutral",1.5,1.5,0);
+if(global.allign &lt; 0 &amp;&amp; global.allign &gt; -4)
+    draw_text_transformed(view_xview+430,view_yview+80,"Rough",1.5,1.5,0);
+if(global.allign &lt; -3 &amp;&amp; global.allign &gt; -7)
+    draw_text_transformed(view_xview+430,view_yview+80,"Bad",1.5,1.5,0);
+if(global.allign == -7)
+    draw_text_transformed(view_xview+430,view_yview+80,"Terrified",1.5,1.5,0);
+    
+draw_text_transformed(view_xview+75,view_yview+115,"Money: ",1.5,1.5,0);
+draw_text_transformed(view_xview+175,view_yview+115,Felicia.money,1.5,1.5,0);
+
+draw_set_halign(fa_center);
+draw_text_transformed(view_xview + (view_wview/2),view_yview+130,"Quests",1.75,1.75,0);
+draw_sprite(spr_questsBox,0,view_xview,view_yview);
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(obj_NPC1.talked != 0)
+    draw_text_transformed(view_xview+160,view_yview+175,"Cat in Tree",1,1,0);
+if(obj_NPC1.talked == 2)
+    draw_sprite(spr_yes_no,0,view_xview+272,view_yview+170);
+if(obj_NPC1.talked == 3)
+    draw_sprite(spr_yes_no,1,view_xview+272,view_yview+170);
+
+if(obj_NPC3.talked != 0)
+    draw_text_transformed(view_xview+160,view_yview+175,"Monster",1,1,0);
+if(obj_NPC3.talked == 2)
+    draw_sprite(spr_yes_no,0,view_xview+272,view_yview+220);
+if(obj_NPC3.talked == 3)
+    draw_sprite(spr_yes_no,1,view_xview+272,view_yview+220);
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
   </events>

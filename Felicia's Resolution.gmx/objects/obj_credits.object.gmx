@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_message("All sprites made by Eli Brainard or found royalty free on opengameart.org. Sprites by Eli Brainard, ansimuz, russpuppy, and Trent Gamblin.");
+            <string>show_message("All sprites made by Eli Brainard or found royalty free on opengameart.org. Sprites by Eli Brainard, ansimuz, russpuppy, Endymian, and Trent Gamblin.");
 </string>
           </argument>
         </arguments>

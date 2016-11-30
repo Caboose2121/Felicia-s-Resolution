@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_message("Move with arrow keys. Interact with 'E' and Make decisions with 'Q' and 'W'. The meter at the top shows your allignment with the town, the more to the right, the kinder you are, the more to the left, the meaner you are.");
+            <string>show_message("Move with arrow keys. Interact with 'E' and Make decisions with 'Q' and 'W'. The meter at the top shows your allignment with the town, the more to the right, the kinder you are, the more to the left, the meaner you are.
+    Press 'P' to pause and unpause.");
 </string>
           </argument>
         </arguments>
