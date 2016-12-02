@@ -83,6 +83,10 @@ isMoving = false;
 moveTimer = 0;
 speedX = 0;
 speedY = 0;
+
+footsteps[0] = snd_foot1;
+footsteps[1] = snd_foot2;
+footsteps[2] = snd_foot3;
 </string>
           </argument>
         </arguments>
@@ -410,7 +414,9 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.isTalking == false)
+            <string>var foot;
+
+if(global.isTalking == false)
 {
 if(isMoving == false)
 {
@@ -465,9 +471,12 @@ if(isMoving == true)
     x += speedX;
     y += speedY;
     moveTimer -= moveSpeed;
+    
     if(moveTimer == 0)
     {
         isMoving = false;
+        foot = irandom(2);
+        audio_play_sound(footsteps[foot],1,false);
     }
 }
 }
