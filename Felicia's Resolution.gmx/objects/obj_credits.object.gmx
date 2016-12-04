@@ -25,8 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_message("All sprites made by Eli Brainard or found royalty free on opengameart.org. Sprites by Eli Brainard, ansimuz, russpuppy, Endymian, Fantozzi, and Trent Gamblin.
-    Music: Frédéric Chopin's Ballade no. 1 in G minor, Op. 23 preformed by Frank Levy.");
+            <string>show_message("All sprites and sounds made by Eli Brainard, Yoyo Games, or found royalty free on opengameart.org. Sprites and sounds by Eli Brainard, Yoyo Games, ansimuz, russpuppy, Endymian, Fantozzi, and Trent Gamblin.
+    Music: Frédéric Chopin's Ballade no. 1 in G minor, Op. 23 preformed by Frank Levy.
+    People with ADD or ADHD may have a hard time keeping track of quests they have available, completed, and the outcome of those quests. I have added a pause menu that adds quests as the player talks to NPC and shows if it was completed with a good or bad marking to match their decisions.
+    No features need to be enabled or disabled; they all add to the game experience as is.");
 </string>
           </argument>
         </arguments>

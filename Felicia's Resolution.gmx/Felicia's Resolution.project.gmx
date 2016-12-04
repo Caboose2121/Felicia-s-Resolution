@@ -9,6 +9,13 @@
     <sound>sound\snd_foot2</sound>
     <sound>sound\snd_foot3</sound>
     <sound>sound\snd_back</sound>
+    <sound>sound\snd_good</sound>
+    <sound>sound\snd_bad</sound>
+    <sound>sound\snd_badCat</sound>
+    <sound>sound\snd_goodCatMon</sound>
+    <sound>sound\snd_item</sound>
+    <sound>sound\snd_near</sound>
+    <sound>sound\snd_nearNPC</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="menus">

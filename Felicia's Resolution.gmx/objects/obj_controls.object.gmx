@@ -26,7 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>show_message("Move with arrow keys. Interact with 'E' and Make decisions with 'Q' and 'W'. The meter at the top shows your allignment with the town, the more to the right, the kinder you are, the more to the left, the meaner you are.
-    Press 'P' to pause and unpause.");
+    Press 'P' to pause and unpause.
+    No features need to be enabled or disabled; they all add to the game experience as is.");
 </string>
           </argument>
         </arguments>
