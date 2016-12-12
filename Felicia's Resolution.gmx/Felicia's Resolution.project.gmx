@@ -16,6 +16,10 @@
     <sound>sound\snd_item</sound>
     <sound>sound\snd_near</sound>
     <sound>sound\snd_nearNPC</sound>
+    <sound>sound\snd_door</sound>
+    <sound>sound\snd_win</sound>
+    <sound>sound\snd_lose</sound>
+    <sound>sound\snd_neutral</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="menus">
@@ -37,7 +41,14 @@
     <sprite>sprites\spr_catTree</sprite>
     <sprite>sprites\spr_NPC2</sprite>
     <sprite>sprites\spr_NPC3</sprite>
+    <sprite>sprites\spr_NPC4</sprite>
     <sprite>sprites\spr_creature</sprite>
+    <sprite>sprites\spr_blobs</sprite>
+    <sprite>sprites\spr_NPC5</sprite>
+    <sprite>sprites\spr_tele</sprite>
+    <sprite>sprites\spr_NPC6</sprite>
+    <sprite>sprites\spr_wizard</sprite>
+    <sprite>sprites\spr_NPC7</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\Tiles1</background>
@@ -61,14 +72,21 @@
     <object>objects\obj_NPC1</object>
     <object>objects\obj_NPC2</object>
     <object>objects\obj_NPC3</object>
+    <object>objects\obj_NPC4</object>
+    <object>objects\obj_NPC5</object>
+    <object>objects\obj_NPC6</object>
+    <object>objects\obj_NPC7</object>
+    <object>objects\obj_wizard</object>
     <object>objects\obj_catTree</object>
     <object>objects\obj_creature</object>
+    <object>objects\obj_blobs</object>
     <object>objects\obj_title</object>
     <object>objects\obj_start</object>
     <object>objects\obj_controls</object>
     <object>objects\obj_credits</object>
     <object>objects\obj_easy</object>
     <object>objects\obj_hard</object>
+    <object>objects\obj_tele</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Title</room>

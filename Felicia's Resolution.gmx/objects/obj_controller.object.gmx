@@ -57,6 +57,59 @@
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.wizard</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>false</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(Felicia.questsDone == 6 &amp;&amp; global.wizard == false)
+{
+    show_message("A wizard has emerged from the mansion.");
+    audio_play_sound(snd_door,1,false);
+    instance_create(1472,928,obj_wizard);
+    global.wizard = true;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="8" enumb="0">
       <action>
@@ -366,7 +419,7 @@ draw_sprite(spr_questsBox,0,view_xview,view_yview);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(obj_NPC1.talked != 0)
+            <string>//if(obj_NPC1.talked != 0)
     draw_text_transformed(view_xview+160,view_yview+175,"Cat in Tree",1,1,0);
 if(obj_NPC1.talked == 2)
     draw_sprite(spr_yes_no,0,view_xview+272,view_yview+170);
@@ -374,11 +427,41 @@ if(obj_NPC1.talked == 3)
     draw_sprite(spr_yes_no,1,view_xview+272,view_yview+170);
 
 if(obj_NPC3.talked != 0)
-    draw_text_transformed(view_xview+160,view_yview+175,"Monster",1,1,0);
+    draw_text_transformed(view_xview+160,view_yview+225,"Monster",1,1,0);
 if(obj_NPC3.talked == 2)
     draw_sprite(spr_yes_no,0,view_xview+272,view_yview+220);
 if(obj_NPC3.talked == 3)
     draw_sprite(spr_yes_no,1,view_xview+272,view_yview+220);
+    
+if(obj_NPC4.talked != 0)
+    draw_text_transformed(view_xview+150,view_yview+275,"Blobs",1,1,0);
+if(obj_NPC4.talked == 2)
+    draw_sprite(spr_yes_no,0,view_xview+272,view_yview+270);
+if(obj_NPC4.talked == 3)
+    draw_sprite(spr_yes_no,1,view_xview+272,view_yview+270);
+
+    
+    
+if(obj_NPC5.talked != 0)
+    draw_text_transformed(view_xview+375,view_yview+175,"Telescope",1,1,0);
+if(obj_NPC5.talked == 2)
+    draw_sprite(spr_yes_no,0,view_xview+493,view_yview+170);
+if(obj_NPC5.talked == 3)
+    draw_sprite(spr_yes_no,1,view_xview+493,view_yview+170);
+
+if(obj_NPC6.talked != 0)
+    draw_text_transformed(view_xview+360,view_yview+225,"Trees",1,1,0);
+if(obj_NPC6.talked == 2)
+    draw_sprite(spr_yes_no,0,view_xview+493,view_yview+220);
+if(obj_NPC6.talked == 3)
+    draw_sprite(spr_yes_no,1,view_xview+493,view_yview+220);
+    
+if(obj_NPC7.talked != 0)
+    draw_text_transformed(view_xview+360,view_yview+275,"Gaurd",1,1,0);
+if(obj_NPC7.talked == 2)
+    draw_sprite(spr_yes_no,0,view_xview+493,view_yview+270);
+if(obj_NPC7.talked == 3)
+    draw_sprite(spr_yes_no,1,view_xview+493,view_yview+270);
 </string>
           </argument>
         </arguments>

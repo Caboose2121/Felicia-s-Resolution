@@ -246,9 +246,9 @@ if(near == 1)
             global.isTalking = false;
             Felicia.depth = 0;
             depth = 0;
-            tutDone = true;
-            if(Felicia.tut == 0)
-                Felicia.tut = 1;
+            //tutDone = true;
+            //if(Felicia.tut == 0)
+            //    Felicia.tut = 1;
             exit;
         }
     }
