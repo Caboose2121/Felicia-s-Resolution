@@ -251,7 +251,7 @@ if(near == 1)
                 Felicia.questsDone += 1;
             }
         }
-        else if(Felicia.questsDone &gt;= 4 &amp;&amp; global.allign &gt;= 0 &amp;&amp; global.isTalking == true)
+        else if(Felicia.questsDone &gt;= 4 &amp;&amp; global.allign &lt; 0 &amp;&amp; global.isTalking == true)
         {
             draw_sprite(spr_diaBox,0,view_xview,view_yview+272);
             draw_text(view_xview+10, view_yview+280, "I'm giving you $5 to leave town once you're done
@@ -259,7 +259,7 @@ if(near == 1)
             draw_text(view_xview+250, view_yview+350, "Press (E) to continue.");
             if(jobDone == false)
             {
-                elicia.money += 5;
+                Felicia.money += 5;
                 talked = 3;
                 global.allign -= 1;
                 audio_play_sound(snd_bad,1,false);
